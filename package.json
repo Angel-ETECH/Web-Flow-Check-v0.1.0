@@ -1,0 +1,16 @@
+{
+  "name": "web-flow-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Convierte recorridos web locales en pruebas de navegador repetibles.",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "demo": "node scripts/run.mjs demo",
+    "check": "node scripts/run.mjs check",
+    "report": "playwright show-report --host 127.0.0.1",
+    "install:skill": "node scripts/setup.mjs skill",
+    "init": "node scripts/setup.mjs workspace"
+  },
+  "devDependencies": { "@playwright/test": "1.65.0" }
+}

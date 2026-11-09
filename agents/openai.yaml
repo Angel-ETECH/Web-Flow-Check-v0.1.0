@@ -1,0 +1,3 @@
+interface:
+  display_name: "Web Flow Check"
+  short_description: "Prueba flujos web en un navegador local"
