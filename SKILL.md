@@ -1,6 +1,6 @@
 ---
 name: web-flow-check
-description: Verify a specific user journey on a local website in a real browser and leave a repeatable Playwright test. Use for requests to comprobar, probar or test expected web behavior on localhost, such as a form, navigation or cart.
+description: Verify the behavior a user requests on any local website in a real browser and leave a repeatable Playwright test. Use for requests to comprobar, probar or test an observable result on localhost, including navigation, validation, filters, and sign-in flows.
 ---
 
 # Web Flow Check
