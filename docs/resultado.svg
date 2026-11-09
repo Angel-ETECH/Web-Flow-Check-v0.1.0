@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 270" role="img" aria-labelledby="title">
+  <title id="title">Ejemplo de resultado. Con dos cuadernos, el subtotal esperado era S/ 60.00 y la tienda mostró S/ 30.00.</title>
+  <rect x="1" y="1" width="1038" height="268" rx="19" fill="#F0F5F1" stroke="#D2DDD5" stroke-width="2"/>
+  <text x="38" y="48" fill="#45635A" font-family="monospace" font-size="15" letter-spacing="2">EJEMPLO DE RESULTADO / TIENDA LOCAL</text>
+  <rect x="851" y="24" width="151" height="36" rx="18" fill="#F8DEDA"/>
+  <text x="926.5" y="47" fill="#922E26" text-anchor="middle" font-family="monospace" font-size="14" font-weight="700">PRUEBA FALLIDA</text>
+  <text x="38" y="106" fill="#142724" font-family="Segoe UI, Arial, sans-serif" font-size="33" font-weight="700">El subtotal debe cambiar a S/ 60.00</text>
+  <text x="38" y="142" fill="#45635A" font-family="Segoe UI, Arial, sans-serif" font-size="20">Paso 02 · Cambiar la cantidad de cuadernos de uno a dos.</text>
+  <rect x="38" y="174" width="471" height="68" rx="10" fill="#FFFFFF"/>
+  <rect x="531" y="174" width="471" height="68" rx="10" fill="#FFF5F2"/>
+  <text x="57" y="215" fill="#45635A" font-family="monospace" font-size="15">ESPERADO</text>
+  <text x="225" y="218" fill="#142724" font-family="monospace" font-size="25" font-weight="700">S/ 60.00</text>
+  <text x="550" y="215" fill="#922E26" font-family="monospace" font-size="15">OBSERVADO</text>
+  <text x="718" y="218" fill="#922E26" font-family="monospace" font-size="25" font-weight="700">S/ 30.00</text>
+</svg>

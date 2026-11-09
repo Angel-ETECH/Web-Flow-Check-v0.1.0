@@ -1,3 +1,5 @@
 interface:
   display_name: "Web Flow Check"
   short_description: "Prueba flujos web en un navegador local"
+  icon_small: "./docs/logo.svg"
+  icon_large: "./docs/logo.svg"

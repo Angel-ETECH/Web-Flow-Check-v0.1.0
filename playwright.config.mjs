@@ -13,6 +13,7 @@ export default defineConfig({
   use: {
     baseURL: demo ? demoUrl : process.env.WEB_FLOW_URL,
     browserName: 'chromium',
+    channel: 'chromium',
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
   },

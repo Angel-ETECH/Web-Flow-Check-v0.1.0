@@ -1,4 +1,5 @@
-import { cpSync, mkdirSync, readdirSync } from 'node:fs';
+#!/usr/bin/env node
+import { cpSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -11,8 +12,8 @@ const agentFolders = new Map([
   ['antigravity', '.gemini/config/skills'],
 ]);
 const files = [
-  '.gitignore', 'LICENSE', 'README.md', 'SKILL.md', 'agents', 'demo', 'docs', 'examples',
-  'package-lock.json', 'package.json', 'playwright.config.mjs', 'scripts',
+  'LICENSE', 'README.md', 'SKILL.md', 'agents', 'demo', 'docs', 'examples',
+  'npm-shrinkwrap.json', 'package.json', 'playwright.config.mjs', 'scripts',
 ];
 
 function setup() {
@@ -36,6 +37,7 @@ function setup() {
   for (const file of files) {
     cpSync(join(source, file), join(target, file), { recursive: true });
   }
+  writeFileSync(join(target, '.gitignore'), 'node_modules/\nplaywright-report/\ntest-results/\n.env\n.env.*\n');
   mkdirSync(join(target, 'checks'));
   console.log(mode === 'skill' ? `Skill instalada en ${target}` : `Entorno creado en ${target}`);
 }

@@ -8,6 +8,9 @@
       "name": "web-flow-check",
       "version": "0.1.0",
       "license": "MIT",
+      "bin": {
+        "web-flow-check": "scripts/setup.mjs"
+      },
       "devDependencies": {
         "@playwright/test": "1.65.0"
       },

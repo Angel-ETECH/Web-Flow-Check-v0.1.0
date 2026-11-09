@@ -2,6 +2,8 @@
   "name": "web-flow-check",
   "version": "0.1.0",
   "private": true,
+  "bin": { "web-flow-check": "scripts/setup.mjs" },
+  "files": ["SKILL.md", "agents", "demo", "docs", "examples", "scripts", "playwright.config.mjs", "npm-shrinkwrap.json"],
   "description": "Convierte recorridos web locales en pruebas de navegador repetibles.",
   "license": "MIT",
   "engines": { "node": ">=22" },

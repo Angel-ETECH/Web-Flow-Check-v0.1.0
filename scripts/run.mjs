@@ -1,4 +1,5 @@
 import { spawnSync } from 'node:child_process';
+import { existsSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 
@@ -30,7 +31,38 @@ if (!validDemo && !validCheck) {
   process.exit(2);
 }
 
-const args = [require.resolve('@playwright/test/cli'), 'test'];
+function prepareRuntime() {
+  if (!existsSync(new URL('../node_modules/@playwright/test/cli.js', import.meta.url))) {
+    console.log('Preparando Playwright para la primera ejecución…');
+    const npm = process.env.npm_execpath;
+    if (!npm) throw new Error('Ejecuta este comando con npm run.');
+    run([npm, 'ci', '--include=dev', '--no-audit', '--no-fund']);
+  }
+
+  const cli = require.resolve('@playwright/test/cli');
+  const { chromium } = require('@playwright/test');
+  if (!existsSync(chromium.executablePath())) {
+    console.log('Descargando Chromium para las pruebas locales…');
+    run([cli, 'install', 'chromium', '--no-shell']);
+  }
+  return cli;
+}
+
+function run(args) {
+  const child = spawnSync(process.execPath, args, { cwd, stdio: 'inherit' });
+  if (child.error) throw child.error;
+  if (child.status !== 0) throw new Error('No se pudo preparar el navegador de pruebas. Revisa la salida y vuelve a ejecutar el comando.');
+}
+
+let cli;
+try {
+  cli = prepareRuntime();
+} catch (error) {
+  console.error(error.message);
+  process.exit(1);
+}
+
+const args = [cli, 'test'];
 if (validCheck && filter) args.push('--', filter);
 
 const result = spawnSync(process.execPath, args, {

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 304" role="img" aria-labelledby="title">
+  <title id="title">Web Flow Check de AG CodeLab. Pruebas para tu web local.</title>
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#142724"/><stop offset="1" stop-color="#0D1717"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0v24" fill="none" stroke="#A7D1BE" stroke-opacity=".09"/>
+    </pattern>
+    <clipPath id="frame"><rect width="1040" height="304" rx="22"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1040" height="304" fill="url(#surface)"/>
+    <path d="M660 0H1040V304H660Z" fill="url(#grid)"/>
+    <path d="M660 0v304" stroke="#34504A"/>
+    <text x="54" y="62" fill="#B5FF91" font-family="monospace" font-size="15" letter-spacing="3">AG CODELAB</text>
+    <text x="50" y="155" fill="#F3FBF7" font-family="Segoe UI, Arial, sans-serif" font-size="67" font-weight="700" letter-spacing="-3">Web Flow Check</text>
+    <text x="54" y="202" fill="#B6CEC6" font-family="Segoe UI, Arial, sans-serif" font-size="23">Pruebas de navegador para tu web local.</text>
+    <path d="M54 250h70" stroke="#B5FF91" stroke-width="3"/>
+    <rect x="753" y="66" width="194" height="172" rx="25" fill="#122421" stroke="#34504A"/>
+    <rect x="787" y="105" width="126" height="91" rx="11" fill="none" stroke="#89A39A" stroke-width="4"/>
+    <path d="M788 128h124" stroke="#89A39A" stroke-width="4"/>
+    <circle cx="803" cy="117" r="3" fill="#89A39A"/>
+    <path d="m821 158 17 17 36-36" fill="none" stroke="#B5FF91" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+  </g>
+</svg>
